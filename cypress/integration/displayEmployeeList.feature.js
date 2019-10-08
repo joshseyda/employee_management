@@ -5,5 +5,9 @@ describe('Display list of employees', () => {
     cy.visit('http://localhost:3000')
     cy.get('section[name="header"]')
       .should('contain', 'Employee List')
+    cy.get('section[name="main"]').within(() =>{
+      cy.get('li')
+        .should('have.length', 5)
+    })
   })
 })

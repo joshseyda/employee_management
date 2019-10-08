@@ -1,17 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import EmployeeList from './components/EmployeeList'
 
-function App() {
-  return (
-    <>
-    <section name="header">
-      <h1>Employee List</h1>
-    </section>
-    <section name="main">
-    </section>
-    </>
-  );
+class App extends Component() {
+  render(){
+    return (
+      <>
+      <section name="header">
+        <h1>Employee List</h1>
+      </section>
+      <section name="main">
+        <EmployeeList />
+      </section>
+      </>
+    );
+  }
 }
 
 export default App;
